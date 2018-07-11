@@ -10,19 +10,31 @@
   },
   "main": "./signature_pad.js",
   "scripts": {
-    "build": "grunt"
+    "start": "node server.js",
+    "build": "grunt",
+    "postinstall": "ng build --aot -prod"
   },
-  "repository" : {
-    "type" : "git",
-    "url" : "https://github.com/szimek/signature_pad.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/szimek/signature_pad.git"
   },
-  "licenses": [{
+  "licenses": [
+    {
       "type": "MIT"
-  }],
+    }
+  ],
   "devDependencies": {
+    "@angular/cli": "^6.0.8",
+    "@angular/compiler-cli": "^6.0.7",
     "grunt": "~0.4.5",
     "grunt-contrib-jshint": "~0.11.0",
     "grunt-contrib-uglify": "~0.8.0",
     "grunt-umd": "~2.3.2"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "path": "^0.12.7",
+    "@angular/cli": "^6.0.8",
+    "@angular/compiler-cli": "^6.0.7"
   }
 }
